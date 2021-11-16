@@ -11,6 +11,7 @@ Other tools used for building the app are the ff:
 ## Steps and Notes in building this project
 
 1. Build a React app from scratch
+
    Source: https://javascript.plainenglish.io/create-a-react-app-from-scratch-in-2021-8e9948602e9c
 
    - Create a directory and cd to it.
