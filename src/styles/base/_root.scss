@@ -1,0 +1,16 @@
+/*=============================================
+=         Root (define css variables)         =
+=============================================*/
+:root {
+  --body-text-color-primary: #{$grayish-blue-darkest};
+  --body-text-color-secondary: #{$grayish-blue-dark};
+
+  --bg-color-primary: #{$white};
+
+  --body-font-family: #{$kumbh-sans};
+  --body-font-size: #{$fs-base};
+  --body-font-weight-normal: #{$fw-normal};
+  --body-font-weight-bold: #{$fw-bold};
+
+  --border-color: #{$grayish-blue};
+}
