@@ -3,6 +3,7 @@ const htmlPlugin = new HtmlWebPackPlugin({
   template: './public/index.html',
   filename: './index.html'
 })
+const path = require('path')
 
 module.exports = {
   mode: 'development',
@@ -21,5 +22,9 @@ module.exports = {
       }
     ]
   },
-  plugins: [htmlPlugin]
+  plugins: [htmlPlugin],
+  resolve: {
+    extensions: ['.js', '.jsx', '*'],
+    modules: [path.resolve(__dirname, 'src'), 'node_modules']
+  }
 }
