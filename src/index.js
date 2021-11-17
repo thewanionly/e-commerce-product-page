@@ -1,10 +1,8 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
 
-import 'styles/main.scss'
+import App from 'App.jsx'
 
-const App = () => {
-  return <h1>E-commerce Product page</h1>
-}
+import 'styles/main.scss'
 
 ReactDOM.render(<App />, document.getElementById('root'))
