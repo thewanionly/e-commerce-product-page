@@ -1,0 +1,11 @@
+/*=============================================
+=            Body font family                  =
+=============================================*/
+$body-font-family: var(--body-font-family, $kumbh-sans) !default;
+
+/*=============================================
+=            Body font sizes/weights          =
+=============================================*/
+$body-font-size: var(--body-font-size, $fs-base) !default;
+$body-font-weight-normal: var(--body-font-weight-normal, $fw-normal) !default;
+$body-font-weight-bold: var(--body-font-weight-bold, $fw-bold) !default;

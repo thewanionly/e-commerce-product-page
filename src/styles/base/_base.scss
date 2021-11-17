@@ -1,0 +1,49 @@
+/*=============================================
+=         Root (define css variables)         =
+=============================================*/
+:root {
+  --body-text-color-primary: #{$grayish-blue-darkest};
+  --body-text-color-secondary: #{$grayish-blue-dark};
+
+  --bg-color-primary: #{$white};
+
+  --body-font-family: #{$kumbh-sans};
+  --body-font-size: #{$fs-base};
+  --body-font-weight-normal: #{$fw-normal};
+  --body-font-weight-bold: #{$fw-bold};
+}
+
+/*=============================================
+=                 CSS Reset                   =
+=============================================*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/*=============================================
+=           General Definitions               =
+=============================================*/
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //1rem = 10px 10px/16px = 62.5%
+}
+
+body {
+  font-family: $body-font-family;
+  font-size: $body-font-size;
+}
+
+button {
+  cursor: pointer;
+}
+
+.root {
+  background-color: $body-text-color-primary;
+}
+// .app {
+//   background-color: $orange-light;
+// }

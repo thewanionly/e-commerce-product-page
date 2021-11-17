@@ -1,0 +1,36 @@
+/*=============================================
+=                 Colors                      =
+=============================================*/
+
+/* Primary */
+$orange: hsl(26, 100%, 55%);
+$orange-light: hsl(25, 100%, 94%);
+
+/* Neutral */
+$grayish-blue-darkest: hsl(220, 13%, 13%);
+$grayish-blue-dark: hsl(219, 9%, 45%);
+$grayish-blue: hsl(220, 14%, 75%);
+$grayish-blue-light: hsl(223, 64%, 98%);
+$white: hsl(0, 0%, 100%);
+$black-transparent: hsla(0, 0%, 0%, 0.75);
+
+/*=============================================
+=                Typography                   =
+=============================================*/
+
+/* Font family */
+$kumbh-sans: 'Kumbh Sans', sans-serif;
+
+/* Font sizes */
+$fs-base: 1.6rem; //16px
+
+/* Font weights */
+$fw-normal: 400;
+$fw-bold: 700;
+
+/*=============================================
+=                Breakpoints                  =
+=============================================*/
+
+$bp-sm: 37.5rem; //375px
+$bp-xl: 144rem; //1440px
