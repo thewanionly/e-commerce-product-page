@@ -5,10 +5,10 @@ import Icon from 'components/atoms/Icon'
 const App = () => {
   return (
     <div className='app'>
-      <header className='header'>sneakers</header> {/* to replace with logo.svg */}
-      <main className='main'>
-        <Icon type='svg' fill='green' />
-      </main>
+      <header className='header'>
+        <Icon name='logo' />
+      </header>
+      <main className='main'></main>
     </div>
   )
 }
