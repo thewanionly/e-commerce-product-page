@@ -4,6 +4,7 @@ const htmlPlugin = new HtmlWebPackPlugin({
   filename: './index.html'
 })
 const path = require('path')
+const webpack = require('webpack')
 
 module.exports = {
   mode: 'development',
@@ -19,6 +20,10 @@ module.exports = {
       {
         test: /\.(s(a|c)ss)$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack']
       }
     ]
   },

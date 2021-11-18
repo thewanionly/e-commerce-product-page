@@ -7,6 +7,11 @@
     "@babel/core": "^7.16.0",
     "@babel/plugin-proposal-class-properties": "^7.16.0",
     "@babel/preset-react": "^7.16.0",
+    "@storybook/addon-actions": "^6.3.12",
+    "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addon-links": "^6.3.12",
+    "@storybook/react": "^6.3.12",
+    "@svgr/webpack": "^5.5.0",
     "babel-loader": "^8.2.3",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^6.5.1",
@@ -23,6 +28,8 @@
     "react-dom": "^17.0.2"
   },
   "scripts": {
-    "start": "webpack serve --config webpack.config.js"
+    "start": "webpack serve --config webpack.config.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   }
 }
