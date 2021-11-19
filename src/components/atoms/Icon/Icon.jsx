@@ -26,8 +26,9 @@ const ICONS = {
 
 const Icon = ({ className = '', name }) => {
   const IconComponent = ICONS[name]
+  const iconClassName = `icon ${className}`
 
-  return <>{IconComponent && <IconComponent className={className} />}</>
+  return <>{IconComponent && <IconComponent className={iconClassName} />}</>
 }
 
 Icon.propTypes = {
