@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Icon from 'components/atoms/Icon'
+import Image from 'components/atoms/Image'
 
 import avatarImg from 'assets/images/image-avatar.png'
 
@@ -17,7 +18,7 @@ const Header = () => {
           <span className='header-nav-link'>Contact</span>
         </nav>
         <Icon name='cart' />
-        <img className='header-nav-avatar' src={avatarImg} alt='avatar' />
+        <Image src={avatarImg} alt='avatar' size='small' isAvatar />
       </div>
     </header>
   )
