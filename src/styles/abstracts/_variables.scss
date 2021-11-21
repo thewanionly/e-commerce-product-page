@@ -22,11 +22,18 @@ $black-transparent: hsla(0, 0%, 0%, 0.75);
 $kumbh-sans: 'Kumbh Sans', sans-serif;
 
 /* Font sizes */
+$fs-small: 1.5rem; //15px
 $fs-base: 1.6rem; //16px
 
 /* Font weights */
 $fw-normal: 400;
 $fw-bold: 700;
+
+/* Font line-heights */
+$lh-base: 1.6rem; //16px
+$lh-medium: 2.5rem; //25px
+$lh-large-1: 2.6rem; //26px
+$lh-large-2: 2.8rem; //28px
 
 /*=============================================
 =                Breakpoints                  =

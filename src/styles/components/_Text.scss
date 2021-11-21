@@ -1,0 +1,46 @@
+.text {
+  //sizes
+  &.base {
+    font-size: $body-font-size;
+  }
+
+  &.small {
+    font-size: $body-font-size-small;
+  }
+
+  //weight
+  &.normal {
+    font-weight: $body-font-weight-normal;
+  }
+
+  //line-height
+  &.base-lh {
+    line-height: $body-text-line-height;
+  }
+
+  &.large-1-lh {
+    line-height: $body-text-line-height-large-1;
+  }
+
+  //colors
+  &.primary {
+    color: $body-text-color-primary;
+
+    &:hover {
+      color: $body-text-color-secondary;
+    }
+  }
+
+  &.secondary {
+    color: $body-text-color-secondary;
+
+    &:hover {
+      color: $body-text-color-primary;
+    }
+  }
+
+  //clickable
+  &.clickable {
+    cursor: pointer;
+  }
+}

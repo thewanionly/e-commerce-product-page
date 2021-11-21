@@ -4,8 +4,19 @@
 $body-font-family: var(--body-font-family, $kumbh-sans) !default;
 
 /*=============================================
-=            Body font sizes/weights          =
+=            Body font sizes                 =
 =============================================*/
 $body-font-size: var(--body-font-size, $fs-base) !default;
+$body-font-size-small: var(--body-font-size-small, $fs-small) !default;
+
+/*=============================================
+=            Body font weight                 =
+=============================================*/
 $body-font-weight-normal: var(--body-font-weight-normal, $fw-normal) !default;
 $body-font-weight-bold: var(--body-font-weight-bold, $fw-bold) !default;
+
+/*=============================================
+=            Body line height                 =
+=============================================*/
+$body-text-line-height: var(--body-text-line-height, $lh-base) !default;
+$body-text-line-height-large-1: var(--body-text-line-height-large-1, $lh-large-1) !default;
