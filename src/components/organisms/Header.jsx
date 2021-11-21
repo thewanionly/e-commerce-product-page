@@ -37,23 +37,27 @@ const Header = () => {
   return (
     <header className='header'>
       <div className='header-nav'>
-        <Icon name='logo' />
-        <nav className='header-nav-links'>
-          {navLinks.map(({ text, name }) => (
-            <Text
-              key={name}
-              className='header-nav-link'
-              size='small'
-              lineHeight='large-1-lh'
-              color='secondary'
-              onClick={() => handleNavLinkClick(name)}
-            >
-              {text}
-            </Text>
-          ))}
-        </nav>
-        <Icon name='cart' />
-        <Image src={avatarImg} alt='avatar' size='small' isAvatar />
+        <div className='header-nav-left'>
+          <Icon className='header-nav-logo' name='logo' />
+          <nav className='header-nav-links'>
+            {navLinks.map(({ text, name }) => (
+              <Text
+                key={name}
+                className='header-nav-link'
+                size='small'
+                lineHeight='large-1-lh'
+                color='secondary'
+                onClick={() => handleNavLinkClick(name)}
+              >
+                {text}
+              </Text>
+            ))}
+          </nav>
+        </div>
+        <div className='header-nav-right'>
+          <Icon className='header-nav-cart' name='cart' />
+          <Image className='header-nav-avatar' src={avatarImg} alt='avatar' size='small' isAvatar />
+        </div>
       </div>
     </header>
   )

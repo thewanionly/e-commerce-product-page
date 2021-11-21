@@ -8,17 +8,23 @@
   &-nav {
     display: flex;
     align-items: center;
-    gap: 5rem;
+    justify-content: space-between;
+    gap: 6rem;
 
-    &-links {
-      margin-right: auto;
+    &-left {
       display: flex;
-      gap: 3rem;
+      gap: 5.6rem;
     }
 
-    &-avatar {
-      width: 5rem;
-      height: 5rem;
+    &-right {
+      display: flex;
+      align-items: center;
+      gap: 4.6rem;
+    }
+
+    &-links {
+      display: flex;
+      gap: 3rem;
     }
   }
 }
