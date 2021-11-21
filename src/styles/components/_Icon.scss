@@ -1,3 +1,7 @@
 .icon {
   flex-shrink: 0;
+
+  &.clickable {
+    cursor: pointer;
+  }
 }

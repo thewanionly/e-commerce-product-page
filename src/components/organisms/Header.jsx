@@ -30,15 +30,27 @@ const Header = () => {
     }
   ]
 
+  const handleMenuClick = () => {
+    console.log('handleMenuClick')
+  }
+
   const handleNavLinkClick = name => {
     console.log('handleNavLinkClick', name)
+  }
+
+  const handleAvatarClick = () => {
+    console.log('handleAvatarClick')
+  }
+
+  const handleCartClick = () => {
+    console.log('handleCartClick')
   }
 
   return (
     <header className='header'>
       <div className='header-nav'>
         <div className='header-nav-left'>
-          <Icon className='header-nav-menu' name='menu' />
+          <Icon className='header-nav-menu' name='menu' onClick={handleMenuClick} />
           <Icon className='header-nav-logo' name='logo' />
           <nav className='header-nav-links'>
             {navLinks.map(({ text, name }) => (
@@ -56,12 +68,13 @@ const Header = () => {
           </nav>
         </div>
         <div className='header-nav-right'>
-          <Icon className='header-nav-cart' name='cart' />
+          <Icon className='header-nav-cart' name='cart' onClick={handleCartClick} />
           <Image
             className='header-nav-avatar-sm'
             src={avatarImg}
             alt='avatar-sm'
             size='small'
+            onClick={handleAvatarClick}
             isAvatar
           />
           <Image
@@ -69,6 +82,7 @@ const Header = () => {
             src={avatarImg}
             alt='avatar-xs'
             size='extra-small'
+            onClick={handleAvatarClick}
             isAvatar
           />
         </div>

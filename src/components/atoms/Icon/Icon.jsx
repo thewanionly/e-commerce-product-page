@@ -24,11 +24,12 @@ const ICONS = {
   logo: LogoSvg
 }
 
-const Icon = ({ className = '', name }) => {
+const Icon = ({ className = '', name, onClick }) => {
+  const isClickable = !!onClick
   const IconComponent = ICONS[name]
-  const iconClassName = `icon ${className}`
+  const iconClassName = `icon ${className} ${isClickable ? 'clickable' : ''}`
 
-  return <>{IconComponent && <IconComponent className={iconClassName} />}</>
+  return <>{IconComponent && <IconComponent className={iconClassName} onClick={onClick} />}</>
 }
 
 Icon.propTypes = {

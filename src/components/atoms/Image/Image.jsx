@@ -1,8 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Image = ({ className = '', src, alt, size = 'medium', isAvatar }) => {
-  const imgClassName = `image ${className} ${size} ${isAvatar ? 'avatar' : ''}`
+const Image = ({ className = '', src, alt, size = 'medium', isAvatar, onClick }) => {
+  const isClickable = !!onClick
+  const imgClassName = `image ${className} ${size} ${isAvatar ? 'avatar' : ''} ${
+    isClickable ? 'clickable' : ''
+  }`
 
   //sizes
   // xs - 24px
@@ -15,7 +18,7 @@ const Image = ({ className = '', src, alt, size = 'medium', isAvatar }) => {
   //borderRadius prop if not avatar
 
   return (
-    <div className={imgClassName}>
+    <div className={imgClassName} onClick={onClick}>
       <img src={src} alt={alt} />
     </div>
   )
