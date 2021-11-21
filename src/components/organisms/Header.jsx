@@ -38,6 +38,7 @@ const Header = () => {
     <header className='header'>
       <div className='header-nav'>
         <div className='header-nav-left'>
+          <Icon className='header-nav-menu' name='menu' />
           <Icon className='header-nav-logo' name='logo' />
           <nav className='header-nav-links'>
             {navLinks.map(({ text, name }) => (
@@ -56,7 +57,20 @@ const Header = () => {
         </div>
         <div className='header-nav-right'>
           <Icon className='header-nav-cart' name='cart' />
-          <Image className='header-nav-avatar' src={avatarImg} alt='avatar' size='small' isAvatar />
+          <Image
+            className='header-nav-avatar-sm'
+            src={avatarImg}
+            alt='avatar-sm'
+            size='small'
+            isAvatar
+          />
+          <Image
+            className='header-nav-avatar-xs'
+            src={avatarImg}
+            alt='avatar-xs'
+            size='extra-small'
+            isAvatar
+          />
         </div>
       </div>
     </header>
