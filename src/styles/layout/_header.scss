@@ -27,4 +27,43 @@
       gap: 3rem;
     }
   }
+
+  @media only screen and (max-width: $bp-l) {
+    margin: 5rem auto 0;
+    width: 75vw;
+
+    &-nav {
+      gap: 5rem;
+
+      &-left {
+        gap: 3.5rem;
+      }
+
+      &-right {
+        gap: 2.5rem;
+      }
+
+      &-links {
+        gap: 1.5rem;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $bp-md) {
+    width: 80vw;
+
+    &-nav {
+      &-left {
+        gap: 3rem;
+      }
+
+      &-right {
+        gap: 2rem;
+      }
+
+      &-links {
+        gap: 1rem;
+      }
+    }
+  }
 }
