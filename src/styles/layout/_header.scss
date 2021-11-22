@@ -32,6 +32,14 @@
       gap: 3rem;
     }
 
+    &-cart {
+      &:hover {
+        path {
+          fill: $icon-fill-color-dark;
+        }
+      }
+    }
+
     &-avatar-xs {
       display: none;
     }
