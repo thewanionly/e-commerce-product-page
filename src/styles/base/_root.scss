@@ -4,13 +4,16 @@
 :root {
   --body-text-color-primary: #{$grayish-blue-darkest};
   --body-text-color-secondary: #{$grayish-blue-dark};
+  --body-text-color-white: #{$white};
 
   --bg-color-primary: #{$white};
+  --bg-color-brand: #{$orange};
 
   --body-font-family: #{$kumbh-sans};
 
   --body-font-size: #{$fs-base};
   --body-font-size-small: #{$fs-small};
+  --body-font-size-xs: #{$fs-xs};
 
   --body-text-line-height: #{$lh-base};
   --body-text-line-height-large-1: #{$lh-large-1};

@@ -1,9 +1,15 @@
 /*=============================================
-=            Global text colors               =
+=            Text colors               =
 =============================================*/
 $body-text-color-primary: var(--body-text-color-primary, $grayish-blue-darkest) !default;
 $body-text-color-secondary: var(--body-text-color-secondary, $grayish-blue-dark) !default;
+$body-text-color-white: var(--body-text-color-white, $white) !default;
+
+/*=============================================
+=                  BG colors                  =
+=============================================*/
 $body-bg-color-primary: var(--bg-color-primary, $white) !default;
+$bg-color-brand: var(--bg-color-brand, $orange) !default;
 
 /*=============================================
 =             Other components                =

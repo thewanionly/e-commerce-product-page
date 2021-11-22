@@ -8,6 +8,10 @@
     font-size: $body-font-size-small;
   }
 
+  &.xs {
+    font-size: $body-font-size-xs;
+  }
+
   //weight
   &.normal {
     font-weight: $body-font-weight-normal;
@@ -37,6 +41,10 @@
     &:hover {
       color: $body-text-color-primary;
     }
+  }
+
+  &.white {
+    color: $body-text-color-white;
   }
 
   //clickable

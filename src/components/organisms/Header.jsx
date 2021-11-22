@@ -68,7 +68,14 @@ const Header = () => {
           </nav>
         </div>
         <div className='header-nav-right'>
-          <Icon className='header-nav-cart' name='cart' onClick={handleCartClick} />
+          <div className='header-nav-cart-container'>
+            <div className='header-nav-cart-badge'>
+              <Text size='xs' color='white'>
+                3
+              </Text>
+            </div>
+            <Icon className='header-nav-cart' name='cart' onClick={handleCartClick} />
+          </div>
           <Image
             className='header-nav-avatar-sm'
             src={avatarImg}
