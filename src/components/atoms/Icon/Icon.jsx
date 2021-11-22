@@ -34,7 +34,8 @@ const Icon = ({ className = '', name, onClick }) => {
 
 Icon.propTypes = {
   className: PropTypes.string,
-  name: PropTypes.string
+  name: PropTypes.string,
+  onClick: PropTypes.func
 }
 
 export default Icon

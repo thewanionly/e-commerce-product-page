@@ -6,7 +6,7 @@ import Text from 'components/atoms/Text'
 
 import avatarImg from 'assets/images/image-avatar.png'
 
-const Header = () => {
+const Header = ({ setShowMenu }) => {
   const navLinks = [
     {
       text: 'Collections',
@@ -32,6 +32,7 @@ const Header = () => {
 
   const handleMenuClick = () => {
     console.log('handleMenuClick')
+    setShowMenu(true)
   }
 
   const handleNavLinkClick = name => {
@@ -70,7 +71,7 @@ const Header = () => {
         <div className='header-nav-right'>
           <div className='header-nav-cart-container'>
             <div className='header-nav-cart-badge'>
-              <Text size='xs' color='white'>
+              <Text size='xs' color='white' weight='bold'>
                 3
               </Text>
             </div>
