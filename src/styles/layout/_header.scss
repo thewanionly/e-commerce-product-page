@@ -25,6 +25,12 @@
 
     &-menu {
       display: none;
+
+      &:hover {
+        path {
+          fill: $icon-fill-color-dark;
+        }
+      }
     }
 
     &-links {
