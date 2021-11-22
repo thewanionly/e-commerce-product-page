@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 /** Text sizes map */
+// 10px (extra-small)
 // 12px (smallest)
 // 13px (smaller)
 // 15px (small)
@@ -21,7 +22,6 @@ import PropTypes from 'prop-types'
 // add overflow styles
 
 /** Line heights */
-// 10px (extra-small)
 // 12px (smallest)
 // 13px (smaller)
 // 15px (small)

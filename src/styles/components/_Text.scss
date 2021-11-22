@@ -17,6 +17,10 @@
     font-weight: $body-font-weight-normal;
   }
 
+  &.bold {
+    font-weight: $body-font-weight-bold;
+  }
+
   //line-height
   &.base-lh {
     line-height: $body-text-line-height;
