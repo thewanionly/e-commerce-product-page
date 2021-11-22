@@ -32,6 +32,27 @@
       gap: 3rem;
     }
 
+    &-link {
+      position: relative;
+
+      &:after {
+        position: absolute;
+        content: '';
+        bottom: -4.5rem;
+        left: 0;
+        width: 100%;
+        height: 0.4rem;
+        background-color: $nav-link-border-color;
+        display: none;
+      }
+
+      &:hover {
+        &:after {
+          display: block;
+        }
+      }
+    }
+
     &-cart {
       &:hover {
         path {
