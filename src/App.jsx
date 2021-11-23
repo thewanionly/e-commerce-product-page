@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 import Header from 'components/organisms/Header'
+import Main from 'components/organisms/Main'
 import MenuSideBar from 'components/organisms/MenuSideBar'
 import Overlay from 'components/organisms/Overlay'
 
@@ -12,7 +13,7 @@ const App = () => {
       {showMenu && <Overlay />}
       <MenuSideBar showMenu={showMenu} setShowMenu={setShowMenu} />
       <Header setShowMenu={setShowMenu} />
-      <main className='main'></main>
+      <Main />
     </div>
   )
 }
