@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Image = ({ className = '', src, alt, size = 'medium', isAvatar, onClick }) => {
+const Image = ({ className = '', src, alt, size = 'medium', borderRadius, isAvatar, onClick }) => {
   const isClickable = !!onClick
   const imgClassName = `image ${className} ${size} ${isAvatar ? 'avatar' : ''} ${
     isClickable ? 'clickable' : ''
@@ -19,7 +19,7 @@ const Image = ({ className = '', src, alt, size = 'medium', isAvatar, onClick })
 
   return (
     <div className={imgClassName} onClick={onClick}>
-      <img src={src} alt={alt} />
+      <img style={{ borderRadius: `${borderRadius}rem` }} src={src} alt={alt} />
     </div>
   )
 }
@@ -29,6 +29,7 @@ Image.propTypes = {
   src: PropTypes.string,
   alt: PropTypes.string,
   size: PropTypes.string,
+  borderRadius: PropTypes.string, //in rem
   isAvatar: PropTypes.bool
 }
 
