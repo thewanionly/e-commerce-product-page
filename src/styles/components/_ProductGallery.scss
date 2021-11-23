@@ -1,0 +1,10 @@
+.product-gallery {
+  &__main-image {
+    margin-bottom: 3.2rem;
+  }
+
+  &__secondary-images {
+    display: flex;
+    gap: 3.1rem;
+  }
+}
