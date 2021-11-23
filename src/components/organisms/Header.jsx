@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import Icon from 'components/atoms/Icon'
 import Image from 'components/atoms/Image'
 import Text from 'components/atoms/Text'
 
+import CartModal from 'components/organisms/CartModal'
+
 import avatarImg from 'assets/images/image-avatar.png'
 
 const Header = ({ setShowMenu }) => {
+  const [showModal, setShowModal] = useState(false)
+
   const navLinks = [
     {
       text: 'Collections',
@@ -45,6 +49,7 @@ const Header = ({ setShowMenu }) => {
 
   const handleCartClick = () => {
     console.log('handleCartClick')
+    setShowModal(prevValue => !prevValue)
   }
 
   return (
@@ -77,6 +82,7 @@ const Header = ({ setShowMenu }) => {
             </div>
             <Icon className='header-nav-cart' name='cart' onClick={handleCartClick} />
           </div>
+          <CartModal showModal={showModal} />
           <Image
             className='header-nav-avatar-sm'
             src={avatarImg}
