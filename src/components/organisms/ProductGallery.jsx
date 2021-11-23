@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import Image from 'components/atoms/Image'
 
@@ -11,30 +11,49 @@ import product2ImgThumbnail from 'assets/images/image-product-2-thumbnail.jpg'
 import product3ImgThumbnail from 'assets/images/image-product-3-thumbnail.jpg'
 import product4ImgThumbnail from 'assets/images/image-product-4-thumbnail.jpg'
 
-const secondarImages = [
-  product1ImgThumbnail,
-  product2ImgThumbnail,
-  product3ImgThumbnail,
-  product4ImgThumbnail
+const images = [
+  {
+    thumbnail: product1ImgThumbnail,
+    main: product1Img
+  },
+  {
+    thumbnail: product2ImgThumbnail,
+    main: product2Img
+  },
+  {
+    thumbnail: product3ImgThumbnail,
+    main: product3Img
+  },
+  {
+    thumbnail: product4ImgThumbnail,
+    main: product4Img
+  }
 ]
 
 const ProductGallery = () => {
+  const [mainImage, setMainImage] = useState(product1Img)
+
+  const handleSetMainImage = img => {
+    setMainImage(img)
+  }
+
   return (
     <div className='product-gallery'>
       <Image
         className='product-gallery__main-image'
-        src={product1Img}
+        src={mainImage}
         alt='main-image'
         size='large'
         borderRadius='1.5'
       />
       <div className='product-gallery__secondary-images'>
-        {secondarImages.map((imgSrc, index) => (
+        {images.map(({ thumbnail, main }, index) => (
           <Image
-            key={imgSrc}
+            key={thumbnail}
             className={`product-gallery__secondary-images--${index + 1}`}
-            src={imgSrc}
+            src={thumbnail}
             alt={`secondary-images-${index + 1}`}
+            onClick={() => handleSetMainImage(main)}
             borderRadius='1'
           />
         ))}
