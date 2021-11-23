@@ -1,0 +1,16 @@
+.app {
+  margin: 0 auto;
+  width: 70vw;
+
+  @media only screen and (max-width: $bp-l) {
+    width: 75vw;
+  }
+
+  @media only screen and (max-width: $bp-md) {
+    width: 80vw;
+  }
+
+  @media only screen and (max-width: $bp-s) {
+    width: 85vw;
+  }
+}
