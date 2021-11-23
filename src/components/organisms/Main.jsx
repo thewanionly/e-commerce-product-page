@@ -5,7 +5,8 @@ import Text from 'components/atoms/Text'
 const Main = () => {
   return (
     <main className='main'>
-      <Text weight='bold'>Main</Text>
+      <div className='main__right'></div>
+      <div className='main__left'></div>
     </main>
   )
 }

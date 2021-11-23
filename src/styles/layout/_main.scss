@@ -1,3 +1,16 @@
 .main {
-  display: flex;
+  padding: 9rem 4.7rem 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(#{'min(100%, 25rem)'}, 1fr));
+  column-gap: 10rem;
+  row-gap: 4rem;
+
+  &__right {
+    height: 30vh;
+  }
+
+  &__left {
+    height: 30vh;
+  }
 }
