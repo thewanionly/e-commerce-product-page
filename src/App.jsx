@@ -19,9 +19,14 @@ const App = () => {
     setShowOverlay(showLightBox)
   }, [showLightBox])
 
+  const handleClose = () => {
+    setShowMenu(false)
+    setShowLightBox(false)
+  }
+
   return (
     <div className='app'>
-      {showOverlay && <Overlay />}
+      {showOverlay && <Overlay handleClose={handleClose} />}
       <LightBox showLightBox={showLightBox} setShowLightBox={setShowLightBox} />
       <MenuSideBar showMenu={showMenu} setShowMenu={setShowMenu} />
       <Header setShowMenu={setShowMenu} />

@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Overlay = () => {
-  return <div className='overlay' />
+const Overlay = ({ handleClose }) => {
+  return <div className='overlay' onClick={handleClose} />
 }
 
 export default Overlay
