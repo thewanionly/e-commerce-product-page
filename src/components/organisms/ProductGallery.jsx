@@ -50,9 +50,7 @@ const ProductGallery = () => {
         {images.map(({ thumbnail, main }, index) => (
           <Image
             key={thumbnail}
-            className={`product-gallery__secondary-images--${index + 1} ${
-              mainImage === main ? 'selected' : ''
-            }`}
+            className={`product-gallery__secondary-image ${mainImage === main ? 'selected' : ''}`}
             src={thumbnail}
             alt={`secondary-images-${index + 1}`}
             onClick={() => handleSetMainImage(main)}

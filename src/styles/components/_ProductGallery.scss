@@ -6,9 +6,21 @@
   &__secondary-images {
     display: flex;
     gap: 3.1rem;
+  }
 
-    .selected {
+  &__secondary-image {
+    &:hover {
+      img {
+        opacity: 0.5;
+      }
+    }
+
+    &.selected {
       box-shadow: 0 0 0 0.2rem $avatar-border-color;
+
+      img {
+        opacity: 0.25;
+      }
     }
   }
 }
