@@ -45,11 +45,15 @@ const LightBox = ({ showLightBox, setShowLightBox }) => {
     setShowLightBox(false)
   }
 
-  const handleSetMainImage = img => {
+  const handleSetMainImage = (e, img) => {
+    e.stopPropagation()
+
     setMainImage(img)
   }
 
-  const handleGoToNextImage = () => {
+  const handleGoToNextImage = e => {
+    e.stopPropagation()
+
     let currIndex = currImgIndex
 
     if (currIndex === images.length) {
@@ -61,7 +65,9 @@ const LightBox = ({ showLightBox, setShowLightBox }) => {
     setCurrImgIndex(currIndex)
   }
 
-  const handleGoToPreviousImage = () => {
+  const handleGoToPreviousImage = e => {
+    e.stopPropagation()
+
     let currIndex = currImgIndex
 
     if (currIndex === 1) {
@@ -82,8 +88,8 @@ const LightBox = ({ showLightBox, setShowLightBox }) => {
   }, [mainImage])
 
   return (
-    <div className={`light-box ${showLightBox ? 'open' : ''}`}>
-      <Icon className='light-box__close-icon' name='close' onClick={() => handleCloseLightBox()} />
+    <div className={`light-box ${showLightBox ? 'open' : ''}`} onClick={handleCloseLightBox}>
+      <Icon className='light-box__close-icon' name='close' onClick={handleCloseLightBox} />
       <div className='light-box__main-image__container'>
         <div className='light-box__previous-icon__container' onClick={handleGoToPreviousImage}>
           <Icon className='light-box__previous-icon' name='previous' />
@@ -106,7 +112,7 @@ const LightBox = ({ showLightBox, setShowLightBox }) => {
             className={`light-box__secondary-image ${mainImage === main ? 'selected' : ''}`}
             src={thumbnail}
             alt={`secondary-images-${index + 1}`}
-            onClick={() => handleSetMainImage(main)}
+            onClick={e => handleSetMainImage(e, main)}
             borderRadius='1'
           />
         ))}
