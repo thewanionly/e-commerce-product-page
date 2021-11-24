@@ -6,6 +6,7 @@ const Image = ({ className = '', src, alt, size = 'medium', borderRadius, isAvat
   const imgClassName = `image ${className} ${size} ${isAvatar ? 'avatar' : ''} ${
     isClickable ? 'clickable' : ''
   }`
+  const imgStyle = { borderRadius: `${borderRadius}rem` }
 
   //sizes
   // xs - 24px
@@ -18,8 +19,8 @@ const Image = ({ className = '', src, alt, size = 'medium', borderRadius, isAvat
   //borderRadius prop if not avatar
 
   return (
-    <div className={imgClassName} onClick={onClick}>
-      <img style={{ borderRadius: `${borderRadius}rem` }} src={src} alt={alt} />
+    <div style={imgStyle} className={imgClassName} onClick={onClick}>
+      <img style={imgStyle} src={src} alt={alt} />
     </div>
   )
 }
