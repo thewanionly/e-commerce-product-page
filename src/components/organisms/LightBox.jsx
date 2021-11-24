@@ -75,8 +75,11 @@ const LightBox = ({ showLightBox, setShowLightBox }) => {
 
   useEffect(() => {
     setMainImage(images.find(({ imageIndex }) => imageIndex === currImgIndex).main)
-    console.log('currImgIndex', currImgIndex)
   }, [currImgIndex])
+
+  useEffect(() => {
+    setCurrImgIndex(images.find(({ main }) => main === mainImage).imageIndex)
+  }, [mainImage])
 
   return (
     <div className={`light-box ${showLightBox ? 'open' : ''}`}>
