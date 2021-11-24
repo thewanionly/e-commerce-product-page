@@ -92,11 +92,10 @@
 
     &-avatar-sm,
     &-avatar-xs {
-      border: 0.2rem solid transparent;
       transition: 0.1s all;
 
       &:hover {
-        border: 0.2rem solid $avatar-border-color;
+        box-shadow: 0 0 0 0.2rem $avatar-border-color; //create border with box-shadow so size of image is not affected
       }
     }
   }
