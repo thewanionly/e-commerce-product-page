@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import Icon from 'components/atoms/Icon'
 import Image from 'components/atoms/Image'
@@ -15,24 +15,31 @@ import product4ImgThumbnail from 'assets/images/image-product-4-thumbnail.jpg'
 const images = [
   {
     thumbnail: product1ImgThumbnail,
-    main: product1Img
+    main: product1Img,
+    imageIndex: 1
   },
   {
     thumbnail: product2ImgThumbnail,
-    main: product2Img
+    main: product2Img,
+    imageIndex: 2
   },
   {
     thumbnail: product3ImgThumbnail,
-    main: product3Img
+    main: product3Img,
+    imageIndex: 3
   },
   {
     thumbnail: product4ImgThumbnail,
-    main: product4Img
+    main: product4Img,
+    imageIndex: 4
   }
 ]
 
 const LightBox = ({ showLightBox, setShowLightBox }) => {
   const [mainImage, setMainImage] = useState(product1Img)
+  const [currImgIndex, setCurrImgIndex] = useState(
+    images.find(({ main }) => main === mainImage).imageIndex
+  )
 
   const handleCloseLightBox = () => {
     setShowLightBox(false)
@@ -42,16 +49,53 @@ const LightBox = ({ showLightBox, setShowLightBox }) => {
     setMainImage(img)
   }
 
+  const handleGoToNextImage = () => {
+    let currIndex = currImgIndex
+
+    if (currIndex === images.length) {
+      currIndex = 1
+    } else {
+      currIndex++
+    }
+
+    setCurrImgIndex(currIndex)
+  }
+
+  const handleGoToPreviousImage = () => {
+    let currIndex = currImgIndex
+
+    if (currIndex === 1) {
+      currIndex = 4
+    } else {
+      currIndex--
+    }
+
+    setCurrImgIndex(currIndex)
+  }
+
+  useEffect(() => {
+    setMainImage(images.find(({ imageIndex }) => imageIndex === currImgIndex).main)
+    console.log('currImgIndex', currImgIndex)
+  }, [currImgIndex])
+
   return (
     <div className={`light-box ${showLightBox ? 'open' : ''}`}>
       <Icon className='light-box__close-icon' name='close' onClick={() => handleCloseLightBox()} />
-      <Image
-        className='light-box__main-image'
-        src={mainImage}
-        alt='main-image'
-        size='extra-large'
-        borderRadius='1.5'
-      />
+      <div className='light-box__main-image__container'>
+        <div className='light-box__previous-icon__container' onClick={handleGoToPreviousImage}>
+          <Icon className='light-box__previous-icon' name='previous' />
+        </div>
+        <Image
+          className='light-box__main-image'
+          src={mainImage}
+          alt='main-image'
+          size='extra-large'
+          borderRadius='1.5'
+        />
+        <div className='light-box__next-icon__container' onClick={handleGoToNextImage}>
+          <Icon className='light-box__next-icon' name='next' />
+        </div>
+      </div>
       <div className='light-box__secondary-images'>
         {images.map(({ thumbnail, main }, index) => (
           <Image

@@ -5,6 +5,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   visibility: hidden;
+  user-select: none;
 
   display: flex;
   flex-direction: column;
@@ -25,8 +26,35 @@
     }
   }
 
-  &__main-image {
+  &__main-image__container {
     margin-bottom: 4rem;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__next-icon__container,
+  &__previous-icon__container {
+    position: absolute;
+    cursor: pointer;
+
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 50%;
+    background-color: $body-bg-color-primary;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__next-icon__container {
+    right: -2.8rem;
+  }
+
+  &__previous-icon__container {
+    left: -2.8rem;
   }
 
   &__secondary-images {
