@@ -30,8 +30,12 @@ const images = [
   }
 ]
 
-const ProductGallery = () => {
+const ProductGallery = ({ setShowLightBox }) => {
   const [mainImage, setMainImage] = useState(product1Img)
+
+  const handleOpenLightBox = () => {
+    setShowLightBox(true)
+  }
 
   const handleSetMainImage = img => {
     setMainImage(img)
@@ -44,6 +48,7 @@ const ProductGallery = () => {
         src={mainImage}
         alt='main-image'
         size='large'
+        onClick={() => handleOpenLightBox()}
         borderRadius='1.5'
       />
       <div className='product-gallery__secondary-images'>
