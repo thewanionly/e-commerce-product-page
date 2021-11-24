@@ -1,0 +1,59 @@
+.light-box {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+  &__close-icon {
+    align-self: flex-end;
+    margin-bottom: 2.4rem;
+
+    path {
+      fill: $icon-fill-color-white;
+    }
+
+    &:hover {
+      path {
+        fill: $bg-color-brand;
+      }
+    }
+  }
+
+  &__main-image {
+    margin-bottom: 4rem;
+  }
+
+  &__secondary-images {
+    display: flex;
+    gap: 3.1rem;
+    justify-content: center;
+  }
+
+  &__secondary-image {
+    background-color: $body-bg-color-primary;
+
+    &:hover {
+      img {
+        opacity: 0.5;
+      }
+    }
+
+    &.selected {
+      box-shadow: 0 0 0 0.2rem $avatar-border-color;
+
+      img {
+        opacity: 0.25;
+      }
+    }
+  }
+
+  &.open {
+    visibility: visible;
+  }
+}
