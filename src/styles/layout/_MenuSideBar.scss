@@ -3,6 +3,7 @@
   position: absolute;
   top: 0;
   left: -100%;
+  visibility: hidden;
   transition: all 0.4s ease 0s;
 
   padding: 2.5rem;
@@ -21,6 +22,7 @@
   }
 
   &.open {
+    visibility: visible;
     left: 0;
   }
 }
