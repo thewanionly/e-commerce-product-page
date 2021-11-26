@@ -13,8 +13,8 @@ const productDetails = {
   discount: '50'
 }
 
-const ProductDetails = ({ setShowLightBox }) => {
-  const [quantity, setQuantity] = useState(0)
+const ProductDetails = () => {
+  const [quantity, setQuantity] = useState(1)
   const [cartItems, setCartItems] = useState([])
 
   const { brand, name, description, price, currency, discount } = productDetails || {}
