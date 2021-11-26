@@ -84,9 +84,31 @@
         opacity: 0.65;
       }
 
+      &:disabled {
+        cursor: not-allowed;
+        background-color: $bg-color-disabled;
+        opacity: 0.6;
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+
       &__icon {
         path {
           fill: $icon-fill-color-white;
+        }
+      }
+
+      &:disabled &__label {
+        color: $grayish-blue-dark;
+        opacity: 0.5;
+      }
+
+      &:disabled &__icon {
+        path {
+          fill: $grayish-blue-dark;
+          opacity: 0.5;
         }
       }
     }

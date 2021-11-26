@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Text from 'components/atoms/Text'
 import Icon from 'components/atoms/Icon'
@@ -19,15 +19,15 @@ const ProductDetails = ({ setShowLightBox }) => {
 
   const { brand, name, description, price, currency, discount } = productDetails || {}
 
-  const handleIncrementQuantity = () => {
+  const handleIncrementQuantity = e => {
     setQuantity(prevValue => prevValue + 1)
   }
 
-  const handleDecrementQuantity = () => {
+  const handleDecrementQuantity = e => {
     setQuantity(prevValue => (prevValue > 0 ? prevValue - 1 : prevValue))
   }
 
-  const handleAddToCart = () => {
+  const handleAddToCart = e => {
     setCartItems(prevValue => [
       ...prevValue,
       {
@@ -37,7 +37,9 @@ const ProductDetails = ({ setShowLightBox }) => {
     ])
   }
 
-  console.log(cartItems)
+  useEffect(() => {
+    console.log(cartItems)
+  }, [cartItems])
 
   return (
     <div className='product-details'>
@@ -102,7 +104,11 @@ const ProductDetails = ({ setShowLightBox }) => {
             onClick={handleIncrementQuantity}
           />
         </div>
-        <button className='product-details__actions__add-to-cart' onClick={handleAddToCart}>
+        <button
+          className='product-details__actions__add-to-cart'
+          disabled={quantity === 0}
+          onClick={handleAddToCart}
+        >
           <Icon className='product-details__actions__add-to-cart__icon' name='cart' />
           <Text
             className='product-details__actions__add-to-cart__label'
