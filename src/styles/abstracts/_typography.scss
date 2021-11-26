@@ -6,9 +6,12 @@ $body-font-family: var(--body-font-family, $kumbh-sans) !default;
 /*=============================================
 =            Body font sizes                 =
 =============================================*/
-$body-font-size: var(--body-font-size, $fs-base) !default;
-$body-font-size-small: var(--body-font-size-small, $fs-small) !default;
 $body-font-size-xs: var(--body-font-size-xs, $fs-xs) !default;
+$body-font-size-smaller: var(--body-font-size-smaller, $fs-smaller) !default;
+$body-font-size-small: var(--body-font-size-small, $fs-small) !default;
+$body-font-size: var(--body-font-size, $fs-base) !default;
+$body-font-size-large-2: var(--body-font-size-large-2, $fs-large-2) !default;
+$body-font-size-largest: var(--body-font-size-largest, $fs-largest) !default;
 
 /*=============================================
 =            Body font weight                 =
@@ -19,5 +22,8 @@ $body-font-weight-bold: var(--body-font-weight-bold, $fw-bold) !default;
 /*=============================================
 =            Body line height                 =
 =============================================*/
+$body-text-line-height-smaller: var(--body-text-line-height-smaller, $lh-smaller) !default;
 $body-text-line-height: var(--body-text-line-height, $lh-base) !default;
 $body-text-line-height-large-1: var(--body-text-line-height-large-1, $lh-large-1) !default;
+$body-text-line-height-large-2: var(--body-text-line-height-large-2, $lh-large-2) !default;
+$body-text-line-height-largest: var(--body-text-line-height-largest, $lh-largest) !default;

@@ -1,15 +1,28 @@
 .text {
   //sizes
-  &.base {
-    font-size: $body-font-size;
+
+  &.xs {
+    font-size: $body-font-size-xs;
+  }
+
+  &.smaller {
+    font-size: $body-font-size-smaller;
   }
 
   &.small {
     font-size: $body-font-size-small;
   }
 
-  &.xs {
-    font-size: $body-font-size-xs;
+  &.base {
+    font-size: $body-font-size;
+  }
+
+  &.large-2 {
+    font-size: $body-font-size-large-2;
+  }
+
+  &.largest {
+    font-size: $body-font-size-largest;
   }
 
   //weight
@@ -22,6 +35,10 @@
   }
 
   //line-height
+  &.smaller-lh {
+    line-height: $body-text-line-height-smaller;
+  }
+
   &.base-lh {
     line-height: $body-text-line-height;
   }
@@ -30,29 +47,45 @@
     line-height: $body-text-line-height-large-1;
   }
 
+  &.large-2-lh {
+    line-height: $body-text-line-height-large-2;
+  }
+
+  &.largest-lh {
+    line-height: $body-text-line-height-largest;
+  }
+
   //colors
   &.primary {
     color: $body-text-color-primary;
-
-    &:hover {
-      color: $body-text-color-secondary;
-    }
   }
 
   &.secondary {
     color: $body-text-color-secondary;
-
-    &:hover {
-      color: $body-text-color-primary;
-    }
   }
 
   &.white {
     color: $body-text-color-white;
   }
 
+  &.brand {
+    color: $orange;
+  }
+
   //clickable
   &.clickable {
     cursor: pointer;
+
+    &.primary {
+      &:hover {
+        color: $body-text-color-secondary;
+      }
+    }
+
+    &.secondary {
+      &:hover {
+        color: $body-text-color-primary;
+      }
+    }
   }
 }

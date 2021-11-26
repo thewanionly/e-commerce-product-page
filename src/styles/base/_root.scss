@@ -12,12 +12,18 @@
 
   --body-font-family: #{$kumbh-sans};
 
-  --body-font-size: #{$fs-base};
-  --body-font-size-small: #{$fs-small};
   --body-font-size-xs: #{$fs-xs};
+  --body-font-size-smaller: #{$fs-smaller};
+  --body-font-size-small: #{$fs-small};
+  --body-font-size: #{$fs-base};
+  --body-font-size-large-2: #{$fs-large-2};
+  --body-font-size-largest: #{$fs-largest};
 
+  --body-text-line-height-smaller: #{$lh-smaller};
   --body-text-line-height: #{$lh-base};
   --body-text-line-height-large-1: #{$lh-large-1};
+  --body-text-line-height-large-2: #{$lh-large-2};
+  --body-text-line-height-largest: #{$lh-largest};
 
   --body-font-weight-normal: #{$fw-normal};
   --body-font-weight-bold: #{$fw-bold};

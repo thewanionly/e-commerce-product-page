@@ -38,8 +38,6 @@ const Text = ({
   weight = 'normal',
   lineHeight = 'base-lh',
   color = 'primary',
-  isAllCaps,
-  isTitleCase,
   onClick,
   children
 }) => {
@@ -60,8 +58,6 @@ Text.propTypes = {
   size: PropTypes.string,
   weight: PropTypes.string,
   color: PropTypes.string,
-  isAllCaps: PropTypes.bool,
-  isTitleCase: PropTypes.bool,
   children: PropTypes.node
 }
 
