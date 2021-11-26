@@ -1,0 +1,16 @@
+.product-details {
+  display: flex;
+  flex-direction: column;
+
+  &__brand {
+    margin-bottom: 2.7rem;
+  }
+
+  &__name {
+    margin-bottom: 3.2rem;
+  }
+
+  &__description {
+    margin-bottom: 2.4rem;
+  }
+}
