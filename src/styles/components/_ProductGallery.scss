@@ -17,6 +17,10 @@
   &__secondary-image {
     background-color: $body-bg-color-primary;
 
+    @media only screen and (max-width: $bp-xs) {
+      display: none;
+    }
+
     &:hover {
       img {
         opacity: 0.5;
