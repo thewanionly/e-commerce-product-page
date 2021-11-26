@@ -24,12 +24,20 @@ const ProductDetails = ({ setShowLightBox }) => {
   }
 
   const handleDecrementQuantity = () => {
-    setQuantity(prevValue => prevValue - 1)
+    setQuantity(prevValue => (prevValue > 0 ? prevValue - 1 : prevValue))
   }
 
-  const handleAddToCart = item => {
-    setCartItems(prevValue => [...prevValue, item])
+  const handleAddToCart = () => {
+    setCartItems(prevValue => [
+      ...prevValue,
+      {
+        ...productDetails,
+        quantity
+      }
+    ])
   }
+
+  console.log(cartItems)
 
   return (
     <div className='product-details'>
@@ -78,7 +86,33 @@ const ProductDetails = ({ setShowLightBox }) => {
           {price}
         </Text>
       </div>
-      <div className='product-details__actions'></div>
+      <div className='product-details__actions'>
+        <div className='product-details__actions__update-quantity'>
+          <Icon
+            className='product-details__actions__update-quantity__decrement'
+            name='minus'
+            onClick={handleDecrementQuantity}
+          />
+          <Text className='product-details__actions__update-quantity__value' weight='bold'>
+            {quantity}
+          </Text>
+          <Icon
+            className='product-details__actions__update-quantity__increment'
+            name='plus'
+            onClick={handleIncrementQuantity}
+          />
+        </div>
+        <button className='product-details__actions__add-to-cart' onClick={handleAddToCart}>
+          <Icon className='product-details__actions__add-to-cart__icon' name='cart' />
+          <Text
+            className='product-details__actions__add-to-cart__label'
+            weight='bold'
+            color='white'
+          >
+            Add to cart
+          </Text>
+        </button>
+      </div>
     </div>
   )
 }

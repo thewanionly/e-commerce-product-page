@@ -15,6 +15,8 @@
   }
 
   &__price {
+    margin-bottom: 3.2rem;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -33,6 +35,59 @@
         background-color: $bg-color-brand-light;
         border-radius: 0.6rem;
         padding: 0.4rem 0.8rem;
+      }
+    }
+  }
+
+  &__actions {
+    user-select: none;
+
+    display: flex;
+    gap: 1.6rem;
+
+    @media only screen and (max-width: $bp-xs) {
+      flex-direction: column;
+    }
+
+    &__update-quantity {
+      flex: 1.5;
+
+      background-color: $bg-color-secondary;
+      border-radius: 1rem;
+      padding: 1.7rem 1.6rem;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__decrement,
+      &__increment {
+        &:hover {
+          opacity: 0.65;
+        }
+      }
+    }
+
+    &__add-to-cart {
+      flex: 2.5;
+
+      background-color: $bg-color-brand;
+      border-radius: 1rem;
+      padding: 1.5rem;
+
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        opacity: 0.65;
+      }
+
+      &__icon {
+        path {
+          fill: $icon-fill-color-white;
+        }
       }
     }
   }
