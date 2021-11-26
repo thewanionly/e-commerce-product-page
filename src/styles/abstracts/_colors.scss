@@ -4,12 +4,15 @@
 $body-text-color-primary: var(--body-text-color-primary, $grayish-blue-darkest) !default;
 $body-text-color-secondary: var(--body-text-color-secondary, $grayish-blue-dark) !default;
 $body-text-color-white: var(--body-text-color-white, $white) !default;
+$body-text-color-brand: var(--body-text-color-brand, $orange) !default;
+$body-text-color-disabled: var(--body-text-color-disabled, $grayish-blue) !default;
 
 /*=============================================
 =                  BG colors                  =
 =============================================*/
 $body-bg-color-primary: var(--bg-color-primary, $white) !default;
 $bg-color-brand: var(--bg-color-brand, $orange) !default;
+$bg-color-brand-light: var(--bg-color-brand-light, $orange-light) !default;
 $bg-color-overlay: var(--bg-color-overlay, $black-transparent) !default;
 
 /*=============================================

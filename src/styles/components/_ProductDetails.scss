@@ -13,4 +13,27 @@
   &__description {
     margin-bottom: 2.4rem;
   }
+
+  &__price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+
+    @media only screen and (max-width: $bp-xs) {
+      flex-direction: row;
+    }
+
+    &--discounted {
+      display: flex;
+      gap: 1.6rem;
+      align-items: center;
+
+      &-discount-container {
+        background-color: $bg-color-brand-light;
+        border-radius: 0.6rem;
+        padding: 0.4rem 0.8rem;
+      }
+    }
+  }
 }

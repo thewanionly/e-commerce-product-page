@@ -5,9 +5,12 @@
   --body-text-color-primary: #{$grayish-blue-darkest};
   --body-text-color-secondary: #{$grayish-blue-dark};
   --body-text-color-white: #{$white};
+  --body-text-color-brand: #{$orange};
+  --body-text-color-disabled: #{$grayish-blue};
 
   --bg-color-primary: #{$white};
   --bg-color-brand: #{$orange};
+  --bg-color-brand-light: #{$orange-light};
   --bg-color-overlay: #{$black-transparent};
 
   --body-font-family: #{$kumbh-sans};
@@ -16,7 +19,7 @@
   --body-font-size-smaller: #{$fs-smaller};
   --body-font-size-small: #{$fs-small};
   --body-font-size: #{$fs-base};
-  --body-font-size-large-2: #{$fs-large-2};
+  --body-font-size-larger: #{$fs-larger};
   --body-font-size-largest: #{$fs-largest};
 
   --body-text-line-height-smaller: #{$lh-smaller};

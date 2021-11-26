@@ -48,6 +48,37 @@ const ProductDetails = ({ setShowLightBox }) => {
       <Text className='product-details__description' lineHeight='large-1-lh' color='secondary'>
         {description}
       </Text>
+      <div className='product-details__price'>
+        <div className='product-details__price--discounted'>
+          <Text
+            className='product-details__price--discounted-result'
+            size='larger'
+            lineHeight='large-2-lh'
+            weight='bold'
+          >
+            {price * (discount / 100)}
+          </Text>
+          <div className='product-details__price--discounted-discount-container'>
+            <Text
+              className='product-details__price--discounted-discounte-container-value'
+              weight='bold'
+              color='brand'
+            >
+              {`${discount}%`}
+            </Text>
+          </div>
+        </div>
+        <Text
+          className='product-details__price--original'
+          color='disabled'
+          lineHeight='large-1-lh'
+          weight='bold'
+          isStrikeThrough
+        >
+          {price}
+        </Text>
+      </div>
+      <div className='product-details__actions'></div>
     </div>
   )
 }

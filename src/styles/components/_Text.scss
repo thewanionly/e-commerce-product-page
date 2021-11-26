@@ -1,6 +1,5 @@
 .text {
   //sizes
-
   &.xs {
     font-size: $body-font-size-xs;
   }
@@ -17,8 +16,8 @@
     font-size: $body-font-size;
   }
 
-  &.large-2 {
-    font-size: $body-font-size-large-2;
+  &.larger {
+    font-size: $body-font-size-larger;
   }
 
   &.largest {
@@ -69,7 +68,16 @@
   }
 
   &.brand {
-    color: $orange;
+    color: $body-text-color-brand;
+  }
+
+  &.disabled {
+    color: $body-text-color-disabled;
+  }
+
+  //other text styling/decoration
+  &.strike-through {
+    text-decoration: line-through;
   }
 
   //clickable

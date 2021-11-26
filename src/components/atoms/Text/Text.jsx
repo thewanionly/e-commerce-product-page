@@ -38,13 +38,14 @@ const Text = ({
   weight = 'normal',
   lineHeight = 'base-lh',
   color = 'primary',
+  isStrikeThrough,
   onClick,
   children
 }) => {
   const isClickable = !!onClick
   const textClassName = `text ${className} ${size} ${weight} ${lineHeight} ${color} ${
     isClickable ? 'clickable' : ''
-  }`
+  } ${isStrikeThrough ? 'strike-through' : ''}`
 
   return (
     <span className={textClassName} onClick={onClick}>
