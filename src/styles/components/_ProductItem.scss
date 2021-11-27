@@ -1,0 +1,19 @@
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__delete {
+    &:hover {
+      path {
+        fill: $icon-fill-color;
+      }
+    }
+  }
+}

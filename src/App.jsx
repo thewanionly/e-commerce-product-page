@@ -30,7 +30,7 @@ const App = () => {
       {showOverlay && <Overlay handleClose={handleClose} />}
       <LightBox showLightBox={showLightBox} setShowLightBox={setShowLightBox} />
       <MenuSideBar showMenu={showMenu} setShowMenu={setShowMenu} />
-      <Header setShowMenu={setShowMenu} cartItems={cartItems} />
+      <Header setShowMenu={setShowMenu} cartItems={cartItems} setCartItems={setCartItems} />
       <Main setShowLightBox={setShowLightBox} setCartItems={setCartItems} />
     </div>
   )

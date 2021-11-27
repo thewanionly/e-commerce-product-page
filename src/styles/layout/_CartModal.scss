@@ -20,11 +20,38 @@
   &__body {
     padding: 2.4rem;
     padding-bottom: 3.2rem;
-    height: 18.4rem;
+    min-height: 18.4rem;
 
     display: flex;
+    flex-direction: column;
+
+    &.empty {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+
+  &__checkout-button {
+    margin-top: 2.4rem;
+
+    background-color: $bg-color-brand;
+    border-radius: 1rem;
+    padding: 1.5rem;
+
+    display: flex;
+    gap: 1.5rem;
     align-items: center;
     justify-content: center;
+
+    &:hover {
+      opacity: 0.65;
+    }
   }
 
   &.open {

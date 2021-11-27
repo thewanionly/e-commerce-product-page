@@ -3,7 +3,10 @@ import React, { useEffect, useState } from 'react'
 import Text from 'components/atoms/Text'
 import Icon from 'components/atoms/Icon'
 
+import product1Img from 'assets/images/image-product-1.jpg'
+
 const productDetails = {
+  imgSrc: product1Img,
   brand: 'Sneaker Company',
   name: 'Fall Limited Edition Sneakers',
   description:
@@ -31,7 +34,8 @@ const ProductDetails = ({ setCartItems }) => {
       ...prevValue,
       {
         ...productDetails,
-        quantity
+        quantity,
+        id: Date.now()
       }
     ])
   }
