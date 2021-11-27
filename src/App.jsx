@@ -10,6 +10,7 @@ const App = () => {
   const [showOverlay, setShowOverlay] = useState(false)
   const [showMenu, setShowMenu] = useState(false)
   const [showLightBox, setShowLightBox] = useState(false)
+  const [cartItems, setCartItems] = useState([])
 
   useEffect(() => {
     setShowOverlay(showMenu)
@@ -29,8 +30,8 @@ const App = () => {
       {showOverlay && <Overlay handleClose={handleClose} />}
       <LightBox showLightBox={showLightBox} setShowLightBox={setShowLightBox} />
       <MenuSideBar showMenu={showMenu} setShowMenu={setShowMenu} />
-      <Header setShowMenu={setShowMenu} />
-      <Main setShowLightBox={setShowLightBox} />
+      <Header setShowMenu={setShowMenu} cartItems={cartItems} />
+      <Main setShowLightBox={setShowLightBox} setCartItems={setCartItems} />
     </div>
   )
 }

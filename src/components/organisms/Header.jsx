@@ -8,7 +8,7 @@ import CartModal from 'components/organisms/CartModal'
 
 import avatarImg from 'assets/images/image-avatar.png'
 
-const Header = ({ setShowMenu }) => {
+const Header = ({ setShowMenu, cartItems }) => {
   const [showModal, setShowModal] = useState(false)
 
   const navLinks = [
@@ -75,14 +75,16 @@ const Header = ({ setShowMenu }) => {
         </div>
         <div className='header-nav-right'>
           <div className='header-nav-cart-container'>
-            <div className='header-nav-cart-badge'>
-              <Text size='xs' color='white' weight='bold'>
-                3
-              </Text>
-            </div>
+            {cartItems.length > 0 && (
+              <div className='header-nav-cart-badge'>
+                <Text size='xs' color='white' weight='bold'>
+                  {cartItems.length}
+                </Text>
+              </div>
+            )}
             <Icon className='header-nav-cart' name='cart' onClick={handleCartClick} />
           </div>
-          <CartModal showModal={showModal} />
+          <CartModal showModal={showModal} cartItems={cartItems} />
           <Image
             className='header-nav-avatar-sm'
             src={avatarImg}

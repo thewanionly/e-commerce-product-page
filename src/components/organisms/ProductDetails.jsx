@@ -13,9 +13,8 @@ const productDetails = {
   discount: '50'
 }
 
-const ProductDetails = () => {
+const ProductDetails = ({ setCartItems }) => {
   const [quantity, setQuantity] = useState(1)
-  const [cartItems, setCartItems] = useState([])
 
   const { brand, name, description, price, currency, discount } = productDetails || {}
 
@@ -36,10 +35,6 @@ const ProductDetails = () => {
       }
     ])
   }
-
-  useEffect(() => {
-    console.log(cartItems)
-  }, [cartItems])
 
   return (
     <div className='product-details'>
