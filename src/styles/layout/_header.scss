@@ -69,9 +69,10 @@
       right: -0.5rem;
 
       background-color: $bg-color-brand;
-      width: 1.9rem;
+      min-width: 1.9rem;
       height: 1.3rem;
       border-radius: 0.65rem;
+      padding: 0 0.3rem;
 
       display: flex;
       justify-content: center;
