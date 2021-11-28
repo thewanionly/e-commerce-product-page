@@ -93,14 +93,6 @@ const Header = ({ setShowMenu, cartItems, setCartItems }) => {
             onClick={handleAvatarClick}
             isAvatar
           />
-          <Image
-            className='header-nav-avatar-xs'
-            src={avatarImg}
-            alt='avatar-xs'
-            size='extra-small'
-            onClick={handleAvatarClick}
-            isAvatar
-          />
         </div>
       </div>
     </header>
