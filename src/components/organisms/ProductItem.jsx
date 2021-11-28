@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { formatNumber } from 'utilities/helpers'
+
 import Text from 'components/atoms/Text'
 import Icon from 'components/atoms/Icon'
 import Image from 'components/atoms/Image'
@@ -26,10 +28,10 @@ const ProductItem = ({ data, setCartItems }) => {
         </Text>
         <Text className='product-item__amount' lineHeight='large-1'>
           <Text className='product-item__price-quantity' color='secondary'>
-            {`${price * (discount / 100)} x ${quantity} `}
+            {`${formatNumber(price * (discount / 100), currency)} x ${quantity} `}
           </Text>
           <Text className='product-item__price-total' weight='bold'>
-            {`${price * (discount / 100) * quantity}`}
+            {`${formatNumber(price * (discount / 100) * quantity, currency)}`}
           </Text>
         </Text>
       </div>

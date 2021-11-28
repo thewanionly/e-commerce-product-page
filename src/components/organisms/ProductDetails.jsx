@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
+import { formatNumber } from 'utilities/helpers'
+
 import Text from 'components/atoms/Text'
 import Icon from 'components/atoms/Icon'
 
@@ -65,7 +67,7 @@ const ProductDetails = ({ setCartItems }) => {
             lineHeight='large-2-lh'
             weight='bold'
           >
-            {price * (discount / 100)}
+            {formatNumber(price * (discount / 100), currency)}
           </Text>
           <div className='product-details__price--discounted-discount-container'>
             <Text
@@ -84,7 +86,7 @@ const ProductDetails = ({ setCartItems }) => {
           weight='bold'
           isStrikeThrough
         >
-          {price}
+          {formatNumber(price, currency)}
         </Text>
       </div>
       <div className='product-details__actions'>
