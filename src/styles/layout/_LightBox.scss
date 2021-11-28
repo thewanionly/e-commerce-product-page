@@ -4,12 +4,13 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  visibility: hidden;
   user-select: none;
 
   display: flex;
   flex-direction: column;
   align-content: center;
+
+  display: none;
 
   &__close-icon {
     align-self: flex-end;
@@ -88,6 +89,6 @@
   }
 
   &.open {
-    visibility: visible;
+    display: flex;
   }
 }

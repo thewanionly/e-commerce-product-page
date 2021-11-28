@@ -15,9 +15,12 @@
 
     @media only screen and (max-width: $bp-xs) {
       border-radius: unset;
+      height: 300px;
+      width: 375px;
 
       img {
         border-radius: unset;
+        object-fit: cover;
       }
     }
   }
