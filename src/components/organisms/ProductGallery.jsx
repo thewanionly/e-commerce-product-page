@@ -48,7 +48,6 @@ const ProductGallery = ({ setShowLightBox }) => {
         src={mainImage}
         alt='main-image'
         onClick={() => handleOpenLightBox()}
-        borderRadius='1.5'
       />
       <div className='product-gallery__secondary-images'>
         {images.map(({ thumbnail, main }, index) => (

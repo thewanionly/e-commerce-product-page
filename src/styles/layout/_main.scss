@@ -1,6 +1,4 @@
 .main {
-  // padding: 0 4.7rem;
-
   margin: 9rem auto;
   max-width: 130rem;
   display: grid;
@@ -13,6 +11,10 @@
   &__left {
     max-width: 44.5rem;
     min-width: 30rem;
+
+    @media only screen and (max-width: $bp-xs) {
+      max-width: unset;
+    }
   }
 
   &__right {
@@ -20,6 +22,11 @@
 
     display: flex;
     align-items: center;
+
+    @media only screen and (max-width: $bp-xs) {
+      max-width: unset;
+      width: 87vw;
+    }
   }
 
   @media only screen and (max-width: $bp-l) {
@@ -32,5 +39,10 @@
 
   @media only screen and (max-width: $bp-s) {
     margin: 5rem auto;
+  }
+
+  @media only screen and (max-width: $bp-xs) {
+    margin: 4rem 0 0;
+    row-gap: unset;
   }
 }
