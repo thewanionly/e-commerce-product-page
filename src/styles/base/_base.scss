@@ -4,6 +4,18 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; //1rem = 10px 10px/16px = 62.5%
+
+  @media only screen and (max-width: $bp-md) {
+    font-size: 56.25%; //1rem = 9px 9x/16px = 56.25%
+  }
+
+  @media only screen and (max-width: $bp-s) {
+    font-size: 50%; //1rem = 8px 9x/16px = 50%
+  }
+
+  @media only screen and (max-width: $bp-xs) {
+    font-size: 40.625%; //1rem = 6.5px 6.5x/16px = 40.625%
+  }
 }
 
 body {

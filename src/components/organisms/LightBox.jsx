@@ -112,6 +112,7 @@ const LightBox = ({ showLightBox, setShowLightBox }) => {
             className={`light-box__secondary-image ${mainImage === main ? 'selected' : ''}`}
             src={thumbnail}
             alt={`secondary-images-${index + 1}`}
+            size='medium'
             onClick={e => handleSetMainImage(e, main)}
             borderRadius='1'
           />

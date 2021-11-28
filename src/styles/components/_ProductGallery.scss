@@ -11,14 +11,24 @@
 
   &__secondary-images {
     display: flex;
-    gap: 3.1rem;
+    gap: 2rem;
+    justify-content: space-between;
   }
 
   &__secondary-image {
+    flex: 1;
+    max-width: 8.8rem;
+    max-height: 8.8rem;
+    min-width: 5rem;
+    min-height: 5rem;
     background-color: $body-bg-color-primary;
 
     @media only screen and (max-width: $bp-xs) {
       display: none;
+    }
+
+    img {
+      object-fit: cover;
     }
 
     &:hover {

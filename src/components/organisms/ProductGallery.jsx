@@ -47,7 +47,6 @@ const ProductGallery = ({ setShowLightBox }) => {
         className='product-gallery__main-image'
         src={mainImage}
         alt='main-image'
-        size='large'
         onClick={() => handleOpenLightBox()}
         borderRadius='1.5'
       />
