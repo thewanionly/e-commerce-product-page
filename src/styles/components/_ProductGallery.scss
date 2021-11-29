@@ -1,4 +1,12 @@
 .product-gallery {
+  @media only screen and (max-width: $bp-xs) {
+    user-select: none;
+    display: grid;
+    align-items: center;
+
+    justify-content: space-between;
+  }
+
   &__main-image {
     margin-bottom: 3.2rem;
     border-radius: 1.5rem;
@@ -14,6 +22,8 @@
     }
 
     @media only screen and (max-width: $bp-xs) {
+      grid-column: 1 / 1;
+      grid-row: 1 / 1;
       border-radius: unset;
       height: 300px;
       width: 375px;
@@ -25,6 +35,43 @@
       cursor: unset;
       pointer-events: none;
     }
+  }
+
+  &__next-icon__container,
+  &__previous-icon__container {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    cursor: pointer;
+
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 50%;
+    background-color: $body-bg-color-primary;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      svg path {
+        stroke: $bg-color-brand;
+      }
+    }
+
+    display: none;
+
+    @media only screen and (max-width: $bp-xs) {
+      display: flex;
+    }
+  }
+
+  &__next-icon__container {
+    justify-self: flex-end;
+    margin-right: 2.47rem;
+  }
+
+  &__previous-icon__container {
+    margin-left: 2.47rem;
   }
 
   &__secondary-images {
