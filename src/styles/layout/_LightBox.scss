@@ -64,6 +64,12 @@
     left: -2.8rem;
   }
 
+  &__main-image {
+    max-width: 55.5rem;
+    min-width: 30rem;
+    flex-shrink: 1;
+  }
+
   &__secondary-images {
     display: flex;
     gap: 3.1rem;
@@ -72,6 +78,8 @@
 
   &__secondary-image {
     background-color: $body-bg-color-primary;
+    max-width: 8.8rem;
+    min-width: 7rem;
 
     &:hover {
       img {

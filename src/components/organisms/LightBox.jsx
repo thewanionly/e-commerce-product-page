@@ -98,7 +98,6 @@ const LightBox = ({ showLightBox, setShowLightBox }) => {
           className='light-box__main-image'
           src={mainImage}
           alt='main-image'
-          size='extra-large'
           borderRadius='1.5'
         />
         <div className='light-box__next-icon__container' onClick={handleGoToNextImage}>
@@ -112,7 +111,6 @@ const LightBox = ({ showLightBox, setShowLightBox }) => {
             className={`light-box__secondary-image ${mainImage === main ? 'selected' : ''}`}
             src={thumbnail}
             alt={`secondary-images-${index + 1}`}
-            size='medium'
             onClick={e => handleSetMainImage(e, main)}
             borderRadius='1'
           />

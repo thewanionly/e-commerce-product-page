@@ -20,7 +20,6 @@
 
       img {
         border-radius: unset;
-        object-fit: cover;
       }
     }
   }
@@ -41,10 +40,6 @@
 
     @media only screen and (max-width: $bp-xs) {
       display: none;
-    }
-
-    img {
-      object-fit: cover;
     }
 
     &:hover {
