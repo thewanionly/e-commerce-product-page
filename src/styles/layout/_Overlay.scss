@@ -7,4 +7,8 @@
   width: 100%;
 
   background-color: $bg-color-overlay;
+
+  @media only screen and (max-width: $bp-xs) {
+    display: none;
+  }
 }
