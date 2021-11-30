@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
+import { useLocalStorage } from 'utilities/hooks'
+
 import Header from 'components/organisms/Header'
 import Main from 'components/organisms/Main'
 import MenuSideBar from 'components/organisms/MenuSideBar'
@@ -10,7 +12,7 @@ const App = () => {
   const [showOverlay, setShowOverlay] = useState(false)
   const [showMenu, setShowMenu] = useState(false)
   const [showLightBox, setShowLightBox] = useState(false)
-  const [cartItems, setCartItems] = useState([])
+  const [cartItems, setCartItems] = useLocalStorage('cartItems', [])
 
   useEffect(() => {
     setShowOverlay(showMenu)
