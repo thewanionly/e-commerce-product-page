@@ -10,11 +10,11 @@ html {
   }
 
   @media only screen and (max-width: $bp-s) {
-    font-size: 50%; //1rem = 8px 9x/16px = 50%
+    font-size: 50%; //1rem = 8px 8px/16px = 50%
   }
 
   @media only screen and (max-width: $bp-xs) {
-    font-size: 40.625%; //1rem = 6.5px 6.5x/16px = 40.625%
+    font-size: 43.75%; //1rem = 7px 7x/16px = 43.75%
   }
 }
 
