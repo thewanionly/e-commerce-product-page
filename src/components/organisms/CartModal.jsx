@@ -8,8 +8,12 @@ const CartModal = ({ showModal, cartItems, setCartItems }) => {
     console.log('checkout')
   }
 
+  const handleClickModal = e => {
+    e.stopPropagation()
+  }
+
   return (
-    <div className={`cart-modal ${showModal ? 'open' : ''}`}>
+    <div className={`cart-modal ${showModal ? 'open' : ''}`} onClick={handleClickModal}>
       <div className='cart-modal__header'>
         <Text weight='bold'>Cart</Text>
       </div>

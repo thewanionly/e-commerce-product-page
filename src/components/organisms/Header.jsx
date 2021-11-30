@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import Icon from 'components/atoms/Icon'
 import Image from 'components/atoms/Image'
@@ -8,9 +8,7 @@ import CartModal from 'components/organisms/CartModal'
 
 import avatarImg from 'assets/images/image-avatar.png'
 
-const Header = ({ setShowMenu, cartItems, setCartItems }) => {
-  const [showModal, setShowModal] = useState(false)
-
+const Header = ({ setShowMenu, cartItems, setCartItems, showModal, setShowModal }) => {
   const navLinks = [
     {
       text: 'Collections',
